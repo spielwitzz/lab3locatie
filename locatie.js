@@ -1,4 +1,4 @@
-get_geo_position();
+//get_geo_position();
 
 function on_success(position){
   document.getElementById("latitude").innerHTML =  "Latitude  = " + position.coords.latitude;
