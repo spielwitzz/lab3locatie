@@ -2,7 +2,6 @@ document.addEventListener("touchstart",on_touch);
 document.addEventListener("mousedown",on_touch);
 var recognition = new webkitSpeechRecognition();
 recognition.lang = 'en-US';
-try{
 function on_touch()
 {
 	if(recognition.start)
@@ -11,14 +10,14 @@ function on_touch()
 		recognition_started = true;
 	}
 }
-}
-catch{
+
+
 function onend()
 {
 	recognition.stop();
 	recognition_started = false;
 }
-}
+
 	recognition.onend = onend;
 	recognition.onsoundend = onend;
 	recognition.onspeechend = onend;
