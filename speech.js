@@ -4,7 +4,8 @@ var recognition = new webkitSpeechRecognition();
 recognition.lang = 'en-US';
 function on_touch()
 {
-	if(recognition.start){
+	if(recognition.start)
+	{
 		recognition.start();
 		recognition_started = true;
 	}
